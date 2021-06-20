@@ -32,9 +32,17 @@ const EmployeePage = (props) => {
 
   return (
     <Page className='bg-gray-200'>
-      <h1 style={{ fontSize: 'calc(1.3rem + .6vw)' }}>Reimbursements</h1>
-      <h3 className='uppercase text-gray-500 mb-10'>
-        Employee <span className='normal-case ml-3'>{user.username}</span>
+      <h1 className='text-gray-700' style={{ fontSize: 'calc(1.3rem + .6vw)' }}>
+        Reimbursements
+      </h1>
+      <h2
+        style={{ fontSize: 'calc(1rem + .3vw)' }}
+        className='text-xl uppercase text-gray-500'
+      >
+        Employee
+      </h2>
+      <h3 style={{ fontSize: 'calc(1rem + .3vw)' }} className='mb-10'>
+        {user.username}
       </h3>
       <div
         name='card-container'

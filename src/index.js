@@ -8,7 +8,7 @@ Amplify.configure( config )
 Amplify.configure( {
   Storage: {
     AWSS3: {
-      bucket: 'ersampe5419e149b2540d1aa2cb979543e173f142011-dev',
+      bucket: 'ersimages3bucket205343-dev',
       region: 'us-west-2'
     }
   }

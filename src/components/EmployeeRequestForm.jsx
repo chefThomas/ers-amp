@@ -22,11 +22,11 @@ function EmployeeRequestForm({ addRequest }) {
     const missingFields = getMissingFormFields();
     if (missingFields.length) {
       const prettyList = missingFields.join(', ');
-      handleSetMessage('error', `Please include ${prettyList}`);
+      handleSetMessage('error', `Missing ${prettyList}`);
       return;
     }
 
-    // addRequest(form);
+    addRequest(form);
     setForm(initVals);
   }
 

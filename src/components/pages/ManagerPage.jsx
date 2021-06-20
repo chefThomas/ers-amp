@@ -43,8 +43,16 @@ const ManagerPage = () => {
 
   return (
     <Page className='bg-gray-200'>
-      <h1 style={{ fontSize: 'calc(1.3rem + .6vw)' }}>Reimbursements</h1>
-      <h3 className='ext-l uppercase text-gray-500 mb-10'>Manager</h3>
+      <h1 style={{ fontSize: 'calc(1.3rem + .3vw)' }}>Reimbursements</h1>
+      <h2
+        style={{ fontSize: 'calc(1rem + .2vw)' }}
+        className='text-xl uppercase text-gray-500'
+      >
+        Manager
+      </h2>
+      <h3 style={{ fontSize: 'calc(1rem + .2vw)' }} className='mb-10'>
+        {user.username}
+      </h3>
       <div
         name='card-container'
         className='flex flex-wrap gap-x-5 gap-y-3 justify-center mb-9'
