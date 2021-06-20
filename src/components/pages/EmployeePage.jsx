@@ -36,7 +36,6 @@ const EmployeePage = (props) => {
       <h3 className='uppercase text-gray-500 mb-10'>
         Employee <span className='normal-case ml-3'>{user.username}</span>
       </h3>
-
       <div
         name='card-container'
         className='flex flex-wrap gap-x-5 gap-y-3 justify-center mb-9 divide-y-2'

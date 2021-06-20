@@ -78,11 +78,14 @@ function EmployeeRequestForm({ addRequest }) {
         className='bg-gray menu-card relative px-8 pt-6 pb-8 mb-4'
         action='emp-request'
       >
+        <div className='text-xs absolute top-2 right-2 text-gray-700'>
+          Required*
+        </div>
         <label
           className='block text-gray-700 text-sm font-bold mb-2'
           htmlFor='type'
         >
-          Type
+          Type*
         </label>
         <select
           required
@@ -101,7 +104,7 @@ function EmployeeRequestForm({ addRequest }) {
           className='block text-gray-700 text-sm font-bold mb-2'
           htmlFor='amount'
         >
-          Amount
+          Amount*
         </label>
         <input
           onChange={handleReqFormChange}
@@ -115,7 +118,7 @@ function EmployeeRequestForm({ addRequest }) {
           className='block text-gray-700 text-sm font-bold mb-2'
           htmlFor='amount'
         >
-          Description
+          Description*
         </label>
         <textarea
           name='description'
@@ -135,7 +138,7 @@ function EmployeeRequestForm({ addRequest }) {
           }
         >
           <span className='text-base leading-normal cursor-pointer'>
-            {!form.imageUrl ? 'Attach receipt image file' : `File attached`}
+            {!form.imageUrl ? 'Attach receipt image file*' : `File attached`}
           </span>
           <input onChange={handleFileUpload} type='file' className='hidden' />
         </label>

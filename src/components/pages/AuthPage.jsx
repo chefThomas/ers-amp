@@ -74,13 +74,13 @@ const AuthPage = () => {
   function fadeInCredentials() {
     setTimeout(() => {
       setShowCredentials(true);
-    }, 1000);
+    }, 900);
   }
 
   const demoCredentials = [
     'Manager',
     'Username: tom',
-    'Password: a3soprox!',
+    'Password: fakepa$$',
     '------',
     'Employee1',
     'Username: sophie',
@@ -88,7 +88,7 @@ const AuthPage = () => {
     '------',
     'Employee2',
     'Username: george',
-    'Password: fakepa$$!',
+    'Password: fakepa$$',
   ];
 
   return (
