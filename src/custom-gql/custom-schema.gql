@@ -1,0 +1,40 @@
+enum UserType {
+  EMPLOYEE
+  MANAGER
+}
+enum ReimbursementStatus {
+  PENDING
+  APPROVED
+  DECLINED
+}
+
+enum ReimbursementType {
+  LODGING
+  FOOD
+  TRAVEL
+  OTHER
+}
+
+type User
+  @model
+  @key(name: "byUsername", fields: ["username"], queryField: "byUsername") {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  username: String!
+  email: String!
+  password: String!
+  type: UserType!
+  reimbursements: [Reimbursement] @connection(keyName: "byUser", fields: ["id"])
+}
+
+type Reimbursement @model @key(name: "byUser", fields: ["userId"]) {
+  id: ID!
+  description: String!
+  userId: ID!
+  amount: Float!
+  submitted: String!
+  status: ReimbursementStatus!
+  resolvedBy: ID
+  reimbursementType: ReimbursementType!
+}
