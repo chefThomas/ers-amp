@@ -56,7 +56,7 @@ function EmployeeRequestForm({ addRequest }) {
     const image = e.target.files[0];
     // get file type
     const filetype = image.name.split('.')[image.name.split.length - 1];
-    // add unique id to avoid name collisions
+    // rename file with
     const fileName = `${uuid()}.${filetype}`;
     try {
       const { key } = await Storage.put(fileName, image);
